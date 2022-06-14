@@ -1,7 +1,7 @@
 /* header */
 
 .header {
-    height: 110px;
+    height: 45px;
     margin-top: 80px;
 
 }
@@ -42,7 +42,7 @@
 }
 
 .header-logo {
-    margin-left: 10%;
+    margin-left: 23%;
 }
 
 .header-item {
@@ -75,9 +75,67 @@ input#search-box {
     outline: none;
 }
 
-.header__user:hover, .header__search-icon:hover, .header__wishlist-icon:hover {
+.header__user:hover .my-account, .header__search-icon:hover, .header__wishlist-icon:hover {
     color: #ef1e1e;
     cursor: pointer;
+}
+
+.header__user {
+    font-size: 1.6rem;
+}
+
+/* Account */
+.account {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    min-width: 160px;
+    text-align: center;
+    margin-top: 12px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+    padding: 10px;
+    border-top: 3px solid var(--primary-color);
+    display: none;
+}
+.account.active{
+    display: block;
+}
+
+.account::before {
+    content: "";
+    border-width: 8px 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--primary-color) transparent;
+    position: absolute;
+    left: 34px;
+    top: -18px;
+}
+
+.account-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.account__sign-in {
+    padding: 10px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.account__register {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.account__sign-in:hover,
+.account__register:hover {
+    background-color: #f0efef;
 }
 
 /* End Search-product */
@@ -112,7 +170,15 @@ input#search-box {
     padding-bottom: 3px;
 }
 
+.header__nav-item i {
+    margin-left: 8px;
+    position: relative;
+    top: -2px;
+    left: 0;
+}
+
 .header__nav-item:hover i{
+    position: relative;
     color: #ef1e1e;
 }
 
@@ -123,11 +189,11 @@ input#search-box {
     font-weight: bold;
 }
 
+
 /* main  */
 
 .main {
-    height: 1000px;
-    /* max-height: calc(100%-82px); */
+    
 }
 
 /* footer */
@@ -337,6 +403,15 @@ input#search-box {
     padding: 65px 0 65px 45px;
     font-size: 1.4rem;
     color: var(--text-color);
+}
+
+.safira {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+.safira:hover {
+    color: var(--primary-color);
 }
 
 .footer__bottom-payment {
